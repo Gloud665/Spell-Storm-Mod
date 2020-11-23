@@ -37,6 +37,8 @@ public final class Lib {
 		// Entities
 		public static final String MAGICAL_FIREBALL_ENTITY_STR = "magical_fireball_entity";
 		public static final ResourceLocation MAGICAL_FIREBALL_ENTITY_RS = prefix(MAGICAL_FIREBALL_ENTITY_STR);
+		public static final String DUMMY_ENTITY_STR = "dummy_entity";
+		public static final ResourceLocation DUMMY_ENTITY_STR_RS = prefix(DUMMY_ENTITY_STR);
 		
 		// Sound
 		public static final ResourceLocation ETERNAL_SCREAMING_SOUND = prefix("eternal_screaming");
@@ -58,6 +60,7 @@ public final class Lib {
 		public static final ResourceLocation MAGICAL_FORGE_RECIPE_RESOURCELOCATION = prefix(MAGICAL_FORGE_RECIPE_ID);
 		public static final String SPELL_PAGES_RECIPE_ID = "spellpage";
 		public static final ResourceLocation SPELL_PAGES_RECIPE_RESROUCELOCATOIN = prefix(SPELL_PAGES_RECIPE_ID);
+		
 		
 	}
 	

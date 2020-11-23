@@ -9,6 +9,7 @@ import ch.darklions888.SpellStorm.registries.BlockInit;
 import ch.darklions888.SpellStorm.registries.ContainerTypesInit;
 import ch.darklions888.SpellStorm.registries.EntityInit;
 import ch.darklions888.SpellStorm.registries.TileEntityInit;
+import ch.darklions888.SpellStorm.client.renderer.DummyRender;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.RenderType;
@@ -38,6 +39,7 @@ public class ClientSideSetup {
 	
 	private static void registerEntityRenderers() {
 		RenderingRegistry.registerEntityRenderingHandler(EntityInit.MAGICAL_FIREBALL.get(), renderManager -> new SpriteRenderer<>(renderManager, Minecraft.getInstance().getItemRenderer()));
+		RenderingRegistry.registerEntityRenderingHandler(EntityInit.DummyMyDummy.get(), DummyRender::new);
 	}
 	
 	private static void registerContainerScreen() {

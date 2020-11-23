@@ -9,6 +9,7 @@ import ch.darklions888.SpellStorm.data.DataGenerators;
 import ch.darklions888.SpellStorm.lib.Lib;
 import ch.darklions888.SpellStorm.lib.config.ConfigHandler;
 import ch.darklions888.SpellStorm.network.PacketHandler;
+import ch.darklions888.SpellStorm.objects.entities.DummyEntity;
 import ch.darklions888.SpellStorm.registries.BlockInit;
 import ch.darklions888.SpellStorm.registries.ContainerTypesInit;
 import ch.darklions888.SpellStorm.registries.EffectInit;
@@ -20,10 +21,12 @@ import ch.darklions888.SpellStorm.registries.RecipeSerializerInit;
 import ch.darklions888.SpellStorm.registries.SoundInit;
 import ch.darklions888.SpellStorm.registries.TileEntityInit;
 import ch.darklions888.SpellStorm.registries.WorldFeatureInit;
+import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.DeferredWorkQueue;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
@@ -77,6 +80,7 @@ public class SpellStormMain {
 		PacketHandler.init();
 		WorldFeatureInit.init();
 		WorldFeatureInit.setup();
+		GlobalEntityTypeAttributes.put(EntityInit.DummyMyDummy.get(), DummyEntity.setCustomAttributes().create());
 	}
 
 	@SubscribeEvent
