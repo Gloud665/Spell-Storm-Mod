@@ -9,10 +9,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class DummyRender extends MobRenderer<DummyEntity, DummyModel<DummyEntity>> {
 
-    protected static final ResourceLocation TEXTURE = new ResourceLocation("textures/environment/dummy_entity.png");
+    protected static final ResourceLocation TEXTURE = new ResourceLocation(Lib.MOD_ID,"textures/entities/dummy_entity.png");
 
     public DummyRender(EntityRendererManager renderManagerIn) {
-        super(renderManagerIn, new DummyModel(), 0.7f);
+        super(renderManagerIn, new DummyModel<DummyEntity>(), 0.7f);
     }
 
     @Override
